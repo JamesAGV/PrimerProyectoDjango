@@ -75,8 +75,14 @@ Es necesario paa que todas las aplicaciones que vienen con Django y se conectan 
 ## Arrancar servidor web
 
 - python manage.py runserver
+
 En este momento ya el proyecto está corriendo y se puede probar desde un explorador web. Por defecto, el proyecto ya viene con un servidor web para pruebas (no para producción)
 
 http://127.0.0.1:8000/
 
 ![](/home/oem/Pictures/Screenshot from 2023-07-06 21-27-33.png)
+
+## Creación de una página
+
+- Crear un archivo el cual contendrá las vistas que se vayan creando: por convención, se puede llamar views.py y debe quedar en el directorio interno del proyecto **(Proyecto/Proyecto)**.
+- 
