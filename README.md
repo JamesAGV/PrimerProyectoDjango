@@ -23,6 +23,21 @@ Este es un primer proyecto de ejemplo con el framework Django.
 - **Template:** Vista
 - **View:** Controlador
 
+## Bases de datos soportados oficialmente por Django
+
+- SQLite: Gestor de base de datos por defecto, viene incorporado en las últimas versiones de python, no se necesita instalar ni configurar nada.
+- PostgresSQL: Gestor de base de datos recomendado.
+- MySQL.
+- Oracle.
+
+## Bases de datos con conectores ofrecidos por terceros y que no son oficialmente soportados por Django:
+
+- SQL Server.
+- SAP SQL.
+- DB2.
+- Firebird.
+- Otros.
+
 **Nota:** Django está estructurado en base a MTV
 
 ## Instalación de Django
@@ -37,3 +52,31 @@ Nos debemos fijar desde la página oficial de Django, cuál es la última versi�
 
 - pip install Django==4.2.3
 - Desde la consola de python: import django, django.VERSION
+
+## Creación de un proyecto
+
+- django-admin startproject ***"Nombre del Projecto"*** 
+***Manage: permite interactuar con el proyecto de Django.***
+- manage.py help: permite observar todas las utilidades de este archivo.
+- __init__.py: permite que el proyecto funcione como un paquete.
+- settings.py: contiene todas las configuraciones del proyecto de Django. También contiene las aplicaciones instaladas con Dajango **(INSTALLED_APPS)**.
+- urls.py: almacena todas las urls utilizadas por el proyecto.
+- wsgi.py: servidor web a utilizar en el proyecto Django.
+
+
+## Activar proyecto y crear base de datos (Migrate)
+
+Es necesario paa que todas las aplicaciones que vienen con Django y se conectan con la base de datos, comiencen a funcionar, es decir, para que el proyecto comience a funcionar.
+
+- python manage.py migrate
+
+***Nota: se genera en la carpeta del proyecto un archivo db.sqlite3 (base de datos)***
+
+## Arrancar servidor web
+
+- python manage.py runserver
+En este momento ya el proyecto está corriendo y se puede probar desde un explorador web. Por defecto, el proyecto ya viene con un servidor web para pruebas (no para producción)
+
+http://127.0.0.1:8000/
+
+![](/home/oem/Pictures/Screenshot from 2023-07-06 21-27-33.png)
