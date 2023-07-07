@@ -80,7 +80,7 @@ En este momento ya el proyecto está corriendo y se puede probar desde un explor
 
 http://127.0.0.1:8000/
 
-![](/home/oem/Pictures/Screenshot from 2023-07-06 21-27-33.png)
+![](./images/WebServiceRunning.png)
 
 ## Creación de una página
 
