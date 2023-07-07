@@ -85,4 +85,9 @@ http://127.0.0.1:8000/
 ## Creación de una página
 
 - Crear un archivo el cual contendrá las vistas que se vayan creando: por convención, se puede llamar views.py y debe quedar en el directorio interno del proyecto **(Proyecto/Proyecto)**.
-- 
+- from django.http import HttpResponse.
+- Programar cada una de las vistas.
+- Incluir cada vista en urls.py **(cada url debe llamar una vista)**.
+- Recordar volver al correr el servidor web **(python manage.py runserver)**.
+
+![](./images/HolaMundo.png)
