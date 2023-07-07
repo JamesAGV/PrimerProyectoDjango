@@ -91,3 +91,5 @@ http://127.0.0.1:8000/
 - Recordar volver al correr el servidor web **(python manage.py runserver)**.
 
 ![](./images/HolaMundo.png)
+
+![](./images/Despido.png)
