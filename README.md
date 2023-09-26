@@ -94,7 +94,7 @@ http://127.0.0.1:8000/
 
 ![](./images/Despido.png)
 
-## PLantlas
+## Templates
 
 1. Creación de objeto tipo Template.
 plc=Template(doc_externo.read())
