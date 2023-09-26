@@ -93,3 +93,12 @@ http://127.0.0.1:8000/
 ![](./images/HolaMundo.png)
 
 ![](./images/Despido.png)
+
+## PLantlas
+
+1. Creación de objeto tipo Template.
+plc=Template(doc_externo.read())
+2. Creación de contexto: datos adicionales para template (variables, funciones, etc).
+ctx=Context()
+3. Renderizar el objetip de tipo Template.
+documento=plt.render(ctx)
