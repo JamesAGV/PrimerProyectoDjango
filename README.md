@@ -102,3 +102,49 @@ plc=Template(doc_externo.read())
 ctx=Context()
 3. Renderizar el objetip de tipo Template.
 documento=plt.render(ctx)
+
+
+## Nomenclatura del punto (.)
+
+Se usas para acceder a diccionarios, atributos, métodos e índices de lista. Su prioridad es la siguiente:
+
+1. Diccionario
+2. Atributo.
+3. Método.
+4. índice de lista.
+
+## Loader: cargar plantillas
+1. from django.template import loader, tiene un método get_template
+
+2. En el archivo settings se debe indicar la ruta de las plantillas: TEMPLATES-'DIRS' (se debe especificar en esa lista la cual está dentro del diccionario TEMPLATES): 'DIRS: ["/home/oem/PycharmProjects/PrimerProyectoDjango/Proyecto1/Proyecto1/templates"]'
+![](./images/Loader_templates.png)
+
+3. Completar el código:
+
+- doc_externo = loader.get_template('my_template.html')
+- documento = doc_externo.render(dictionary)
+- return HttpResponse(documento)
+
+## Simplificación de código con shorcuts
+
+1. from django.shortcuts import render
+2. return render(request, 'my_template.html', dictionary)
+
+https://docs.djangoproject.com/en/4.2/topics/http/shortcuts/
+
+## Plantillas Incrustada 
+
+1. Crear el código html de la plantalla que se quiere incrustar.
+2. En la plantilla donde se quiere incrustar la anterior, agregar: {% include "nombre de la plantilla a inscrustar" %}
+
+## Herencia de Templates
+
+1. En la plantilla padre se pueden agregar etiquetas como éstas: 
+- {% block title %} {% endblock %}
+- {% block content %} {% endblock %}
+
+2. En las plantillas hijas se agregan las siguientes etiquetas:
+
+- {% extends "main_template.html" %}
+- {% block title %} título {% endblock %}
+- {% block content %} contendio html{% endblock %}
