@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+</head>
+<body>
+    {% include "complements/barra.html" %}
+    <h1 style="background-color: #B6DFFD; color: black; text-align: center">Industrial Insights</h1>
+    <h2>Nodos de Comunicación</h2>
+
+    {% block content %} {% endblock %}
+
+    <p style="background-color: #B6DFFD; color: black; text-align: right">Gracias por su visita.</p>
+</body>
+</html>

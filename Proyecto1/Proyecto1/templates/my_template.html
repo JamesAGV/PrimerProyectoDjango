@@ -5,6 +5,7 @@
     <title>Industrial Insights</title>
 </head>
 <body>
+    {% include "complements/barra.html" %}
     <h1>Hola Mundo, ahora desde el primer template renderizado</h1>
     <h2>Estampa de tiempo actual: {{estampa}}.</h2>
     <h2>Año: {{estampa.year}}.</h2>
@@ -15,5 +16,39 @@
     <h3>Nombre: {{esposa.nombres}}.</h3>
     <h3>Apellidos: {{esposa.apellidos}}.</h3>
     <h3>Edad: {{esposa.edad}}.</h3>
+    <p>Lista: {{temas.0}}, {{temas.1}}, {{temas.2}}, {{temas.3}}, {{temas.4}}.</p>
+    <p><strong>Temas del curso:</strong></p>
+    <p>{% for tema in temas %}
+            <p>{{tema}}</p>
+        {% endfor %}
+    </p>
+    <p><strong>Lista: Temas del curso:</strong></p>
+    <p>
+        <ul>
+        {% for tema in temas %}
+            <li>{{tema}}</li>
+        {% endfor %}
+        </ul>
+    </p>
+    <p><strong>Lista ordenada: Temas del curso:</strong></p>
+    <p>
+        <ol>
+        {% for tema in temas %}
+            <li>{{tema}}</li>
+        {% endfor %}
+        </ol>
+    </p>
+    {# Así se agregan los comentarios #}
+    <p><strong>Lista condicionada - personas:</strong></p>
+    <p> {% if personas %}
+            <ul>
+            {% for persona in personas %}
+                <li>{{persona}}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No se encontraron elementos.</p>
+        {% endif %}
+    </p>
 </body>
 </html>
